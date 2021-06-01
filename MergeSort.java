@@ -28,22 +28,15 @@ public class MergeSort {
             while(i<=mid) {
                 crr[k] = arr[i];
                 i += 1;
-                k += 1;
-            }
-        }else{
-            while(j<=high){
-                crr[k]=arr[j];
-                j+=1;
-                k+=1;
-            }
-        }
+                k += 1; }
+        }else { while (j <= high) {
+                crr[k] = arr[j];
+                j += 1;
+                k += 1;} }
         int p=0;
         for (int l = low; l <= high; l++) {
             arr[l]=crr[p];
-            p=p+1;
-        }
-    }
-
+            p=p+1; } }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter size of the array : ");
@@ -51,8 +44,7 @@ public class MergeSort {
         int[] arr = new int[n];
         System.out.print("Enter elements in the array : ");
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
+            arr[i] = sc.nextInt();}
         System.out.println("Unsorted array : "+ Arrays.toString(arr));
         MergeSort m=new MergeSort();
         m.mergeSort(arr,0,arr.length-1);

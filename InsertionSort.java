@@ -1,13 +1,12 @@
 import java.util.Scanner;
-
 public class InsertionSort {
     public int[] insertionSort(int[] arr){
         for (int i = 1; i < arr.length; i++) {
             int temp=arr[i];
             int j=i-1;
-            while(j>=0 && arr[j]>temp){
-                arr[j+1]=arr[j];
-                j=j-1;
+            while(j>=0 && arr[j]>temp) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
             }
             arr[j+1]=temp;
         }
@@ -24,10 +23,9 @@ public class InsertionSort {
         }
         InsertionSort b = new InsertionSort();
         int[] res = b.insertionSort(arr);
-        System.out.print("Array in sorted order : ");
+        System.out.println("Array in sorted order : ");
         for (int i : res) {
             System.out.print(i + " ");
         }
-
     }
 }
